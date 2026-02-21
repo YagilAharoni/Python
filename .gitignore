@@ -6,8 +6,7 @@ __pycache__/
 # Ignore personal logs and reports
 logs/*.log
 logs/*.txt
-final_threat_report.csv
-threat_report.csv
+*.csv
 
 # Ignore IDE settings
 .idea/
