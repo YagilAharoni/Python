@@ -14,7 +14,7 @@ A professional Python-based toolset built for **Operational Security (OpSec)** t
 1.  Place log files into the `/logs` directory.
 2.  Execute the analyzer:
     ```bash
-    python bulk_analyzer.py
+    python LogIntel-Analyzer.py
     ```
 3.  Review the generated report in `threat_report.csv`.
 
