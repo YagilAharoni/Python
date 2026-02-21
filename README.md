@@ -15,10 +15,6 @@ A professional Python-based toolset built for **Operational Security (OpSec)** t
 * **`main`**: Stable version with core parsing and analysis features.
 * **`dev`**: Development branch featuring external API integrations and advanced enrichment logic.
 
-### **Tech Stack**
-* **Language:** Python 3.x
-* **Key Libraries:** `Pandas`, `requests` (API calls), `re` (Regex), `os`
-
 ### **How to Use**
 1.  Place log files into the `/logs` directory.
 2.  Add your VirusTotal API key in the configuration section.
