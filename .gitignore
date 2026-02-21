@@ -1,0 +1,13 @@
+# Ignore python environment
+.venv/
+venv/
+__pycache__/
+
+# Ignore personal logs and reports
+logs/*.log
+logs/*.txt
+final_threat_report.csv
+threat_report.csv
+
+# Ignore IDE settings
+.idea/
