@@ -33,8 +33,9 @@ def analyze_folder_to_table(folder_path):
     ip_counts = df['ip'].value_counts().reset_index()
     ip_counts.columns = ['IP Address', 'Request Count']
 
+    min_counts = 10
     # Filter suspicious
-    suspicious = ip_counts[ip_counts['Request Count'] >= 10]
+    suspicious = ip_counts[ip_counts['Request Count'] >= min_counts]
 
 
     print("\n" + "+" + "-" * 40 + "+")
