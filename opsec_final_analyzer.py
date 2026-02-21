@@ -5,7 +5,7 @@ import requests
 import time
 
 # Configurations
-VT_API_KEY = 'aeb406f76639644e45b6c0485fdd1990cdbb68e0d4f3afa97779611db12d86f5'
+VT_API_KEY = 'YOUR_API_KEY_HERE'
 LOGS_FOLDER = 'logs'
 
 
