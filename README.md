@@ -1,15 +1,22 @@
-#########################
+# **LogIntel-Analyzer: Automated Threat Intelligence Suite**
 
-####LogIntel-Analyzer####
+---
 
-#########################
+A professional Python-based toolset built for **Operational Security (OpSec)** teams. This suite automates the process of parsing, normalizing, and analyzing large volumes of security logs to identify potential threats and suspicious patterns.
 
-Automated Threat Intelligence & Log Parsing Suite
+### **Core Capabilities**
+* **Log Aggregation:** Automatically scans directories for `.log` and `.txt` files.
+* **Pattern Detection:** Uses **Regular Expressions (Regex)** to extract IPs and timestamps from unstructured data.
+* **Data Analytics:** Leverages **Pandas** for frequency analysis and identifying anomalies (e.g., brute force attempts).
+* **Structured Reporting:** Exports findings directly to **CSV** for rapid incident response and triage.
 
-Description:
-A Python-based toolset designed for Operational Security (OpSec) teams to automate the triage and analysis of large-scale log data. The suite processes raw network and system logs to identify anomalies, track potential threat actors, and generate structured intelligence reports in Excel.
+### **How to Use**
+1.  Place log files into the `/logs` directory.
+2.  Execute the analyzer:
+    ```bash
+    python bulk_analyzer.py
+    ```
+3.  Review the generated report in `threat_report.csv`.
 
-How to Run:
-1. Copy 'LogIntel-Analyzer.py' to your machine.
-2. Change the wanted logs folder to analyze.
-3. Run the script.
+---
+*Developed by Yagil Aharoni.*
