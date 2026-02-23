@@ -1,28 +1,41 @@
-# **LogIntel-Analyzer: Automated Threat Intelligence Suite**
+LogIntel-Analyzer: Automated Threat Intelligence Suite
+A professional Python-based toolset built for Operational Security (OpSec) teams. This suite automates the process of parsing, normalizing, and analyzing security logs to identify potential threats using behavioral analysis and external threat intelligence.
 
----
+Core Capabilities
+Behavioral Analysis: Beyond simple counting, the tool analyzes HTTP Status Codes (e.g., 404 spikes) to detect Directory Brute Force attacks.
 
-A professional Python-based toolset built for **Operational Security (OpSec)** teams. This suite automates the process of parsing, normalizing, and analyzing large volumes of security logs to identify potential threats and suspicious patterns.
+Sensitive Path Monitoring: Monitors access to critical assets (e.g., /.env, /config.php, /admin) and flags unauthorized successful access (Status 200).
 
-### **Core Capabilities**
-* **Log Aggregation:** Automatically scans directories for `.log` and `.txt` files using the `os` library.
-* **Pattern Detection:** Uses **Regular Expressions (Regex)** to extract IPs and timestamps from unstructured data.
-* **Data Analytics:** Leverages **Pandas** for frequency analysis and identifying anomalies.
-* **Advanced Enrichment (Dev Branch):** Integrated with the **VirusTotal API** to automatically cross-reference suspicious IPs with global threat intelligence databases.
-* **Structured Reporting:** Exports findings directly to **CSV** for rapid incident response and triage.
+Log Forensics & Attribution: Tracks the Source File for every suspicious IP, enabling analysts to identify Lateral Movement across different servers.
 
-### **Branching Strategy**
-* **`main`**: Stable version with core parsing and analysis features.
-* **`dev`**: Development branch featuring external API integrations and advanced enrichment logic.
+Automated Enrichment: Integrated with VirusTotal API (v3) to cross-reference public IPs with 70+ global threat engines.
 
-### **How to Use**
-1.  Place log files into the `/logs` directory.
-2.  Add your VirusTotal API key in the configuration section.
-3.  Execute the analyzer:
-    ```bash
-    python opsec_final_analyzer.py
-    ```
-4.  Review the generated report in `final_threat_report.csv`.
+Data Validation: Uses the ipaddress library to filter out internal/private traffic, ensuring the analysis focuses strictly on external threats.
 
----
-*Developed by Yagil Aharoni.*
+Professional Dashboard: Features a formatted CLI Dashboard for immediate triage directly from the terminal.
+
+How the Investigation Logic Works
+The suite follows a Multi-Stage Triage process:
+
+Parsing: Extracting structured data (IP, Path, Status) from raw text logs.
+
+Validation: Filtering out non-public IPs and malformed data.
+
+Heuristics: Identifying suspicious behavior based on request volume (Thresholds) or access to sensitive files.
+
+Enrichment: Querying Threat Intel only for high-confidence suspicious candidates.
+
+Reporting: Generating a localized summary and a detailed CSV for deeper investigation.
+
+How to Use
+Place log files into the /logs directory.
+
+Add your VirusTotal API key in the API_KEY variable.
+
+Execute the analyzer:
+
+Bash
+python opsec_final_analyzer.py
+Review the CLI Summary on your screen or the detailed report in final_opsec_report.csv.
+
+Developed by Yagil Aharoni.
