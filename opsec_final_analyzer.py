@@ -102,7 +102,7 @@ def analyze_logs():
 
     suspicious['VT_Reputation'] = results
 
-    # --- 5. Final Report Export & Formatted Print ---
+    
     output_file = 'final_opsec_report.csv'
     suspicious.to_csv(output_file, index=False)
 
