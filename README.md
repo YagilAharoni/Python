@@ -2,9 +2,9 @@ LogIntel-Analyzer: Automated Threat Intelligence Suite
 A professional Python-based toolset built for Operational Security (OpSec) teams. This suite automates the process of parsing, normalizing, and analyzing security logs to identify potential threats using behavioral analysis and external threat intelligence.
 
 Core Capabilities
-Behavioral Analysis: Beyond simple counting, the tool analyzes HTTP Status Codes (e.g., 404 spikes) to detect Directory Brute Force attacks.
+Behavioral Analysis: Beyond simple counting, the tool analyzes HTTP Status Codes to detect Directory Brute Force attacks.
 
-Sensitive Path Monitoring: Monitors access to critical assets (e.g., /.env, /config.php, /admin) and flags unauthorized successful access (Status 200).
+Sensitive Path Monitoring: Monitors access to critical assets and flags unauthorized successful access.
 
 Log Forensics & Attribution: Tracks the Source File for every suspicious IP, enabling analysts to identify Lateral Movement across different servers.
 
